@@ -2175,6 +2175,19 @@ Other Style Guides
     }
     ```
 
+  <a name="control-statement--value-selection"></a>
+  - [17.2](#control-statements--value-selection) Don't use selection operators in place of control statements.
+
+    ```javascript
+    // bad
+    !isRunning && startRunning();
+
+    // good
+    if (!isRunning) {
+      startRunning();
+    }
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Comments
@@ -2802,7 +2815,7 @@ Other Style Guides
 
     // bad - raises exception
     const reaction = "No! That's impossible!"
-    (async function meanwhileOnTheFalcon(){
+    (async function meanwhileOnTheFalcon() {
       // handle `leia`, `lando`, `chewie`, `r2`, `c3p0`
       // ...
     }())
@@ -2822,7 +2835,7 @@ Other Style Guides
 
     // good
     const reaction = "No! That's impossible!";
-    (async function meanwhileOnTheFalcon(){
+    (async function meanwhileOnTheFalcon() {
       // handle `leia`, `lando`, `chewie`, `r2`, `c3p0`
       // ...
     }());
